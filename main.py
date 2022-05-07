@@ -6,7 +6,7 @@ import pandas as pd
 from textblob import TextBlob
 from wordcloud import WordCloud, STOPWORDS
 
-os.remove("Twitter_Scraper/demo_data.json")
+os.remove("demo_data.json")
 config = twint.Config()
 config.Pandas = True
 config.Search = "Elon Musk"
@@ -15,7 +15,7 @@ config.Lang = "en"
 config.Since = "2021-10-27 00:00:00"
 config.Limit = 2000
 config.Store_json = True
-config.Output = "Twitter_Scraper/demo_data.json"
+config.Output = "demo_data.json"
 
 twint.run.Search(config)
 
